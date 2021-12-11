@@ -17,3 +17,13 @@ C:/Users/Abed/Desktop/471-Reda-Winter2021/ASP.NET-CORE---REST-API-Sample-develop
 /Users/hudaabbas/Desktop/ASP.NET-CORE---REST-API-Sample-develop/REST API/DatabaseLibrary/obj/Debug/netcoreapp2.2/DatabaseLibrary.csproj.CoreCompileInputs.cache
 /Users/hudaabbas/Desktop/ASP.NET-CORE---REST-API-Sample-develop/REST API/DatabaseLibrary/obj/Debug/netcoreapp2.2/DatabaseLibrary.dll
 /Users/hudaabbas/Desktop/ASP.NET-CORE---REST-API-Sample-develop/REST API/DatabaseLibrary/obj/Debug/netcoreapp2.2/DatabaseLibrary.pdb
+/Users/hudaabbas/Documents/GitHub/CPSC471_API/DatabaseLibrary/bin/Debug/netcoreapp2.2/DatabaseLibrary.deps.json
+/Users/hudaabbas/Documents/GitHub/CPSC471_API/DatabaseLibrary/bin/Debug/netcoreapp2.2/DatabaseLibrary.dll
+/Users/hudaabbas/Documents/GitHub/CPSC471_API/DatabaseLibrary/bin/Debug/netcoreapp2.2/DatabaseLibrary.pdb
+/Users/hudaabbas/Documents/GitHub/CPSC471_API/DatabaseLibrary/obj/Debug/netcoreapp2.2/DatabaseLibrary.csproj.AssemblyReference.cache
+/Users/hudaabbas/Documents/GitHub/CPSC471_API/DatabaseLibrary/obj/Debug/netcoreapp2.2/DatabaseLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/hudaabbas/Documents/GitHub/CPSC471_API/DatabaseLibrary/obj/Debug/netcoreapp2.2/DatabaseLibrary.AssemblyInfoInputs.cache
+/Users/hudaabbas/Documents/GitHub/CPSC471_API/DatabaseLibrary/obj/Debug/netcoreapp2.2/DatabaseLibrary.AssemblyInfo.cs
+/Users/hudaabbas/Documents/GitHub/CPSC471_API/DatabaseLibrary/obj/Debug/netcoreapp2.2/DatabaseLibrary.csproj.CoreCompileInputs.cache
+/Users/hudaabbas/Documents/GitHub/CPSC471_API/DatabaseLibrary/obj/Debug/netcoreapp2.2/DatabaseLibrary.dll
+/Users/hudaabbas/Documents/GitHub/CPSC471_API/DatabaseLibrary/obj/Debug/netcoreapp2.2/DatabaseLibrary.pdb

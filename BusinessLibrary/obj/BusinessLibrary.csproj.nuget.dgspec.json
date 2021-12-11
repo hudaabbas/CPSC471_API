@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/hudaabbas/Desktop/ASP.NET-CORE---REST-API-Sample-develop/REST API/BusinessLibrary/BusinessLibrary.csproj": {}
+    "/Users/hudaabbas/Documents/GitHub/CPSC471_API/BusinessLibrary/BusinessLibrary.csproj": {}
   },
   "projects": {
-    "/Users/hudaabbas/Desktop/ASP.NET-CORE---REST-API-Sample-develop/REST API/BusinessLibrary/BusinessLibrary.csproj": {
+    "/Users/hudaabbas/Documents/GitHub/CPSC471_API/BusinessLibrary/BusinessLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hudaabbas/Desktop/ASP.NET-CORE---REST-API-Sample-develop/REST API/BusinessLibrary/BusinessLibrary.csproj",
+        "projectUniqueName": "/Users/hudaabbas/Documents/GitHub/CPSC471_API/BusinessLibrary/BusinessLibrary.csproj",
         "projectName": "BusinessLibrary",
-        "projectPath": "/Users/hudaabbas/Desktop/ASP.NET-CORE---REST-API-Sample-develop/REST API/BusinessLibrary/BusinessLibrary.csproj",
+        "projectPath": "/Users/hudaabbas/Documents/GitHub/CPSC471_API/BusinessLibrary/BusinessLibrary.csproj",
         "packagesPath": "/Users/hudaabbas/.nuget/packages/",
-        "outputPath": "/Users/hudaabbas/Desktop/ASP.NET-CORE---REST-API-Sample-develop/REST API/BusinessLibrary/obj/",
+        "outputPath": "/Users/hudaabbas/Documents/GitHub/CPSC471_API/BusinessLibrary/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

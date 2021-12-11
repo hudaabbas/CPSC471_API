@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yKK12tlXVxmhdIuLgF6tMZWKIK4cLv3dgAqftqiWCcOrVN+urWU/YfQco4kB6N38oh9cU7MkSUaszlqnHXEmZw==",
+  "dgSpecHash": "0YUtlc/kJAvhzAkWHNs/dy1g1kB9cnYZlrTwd+Dcv4NgHWGUubF/A0b9JwnDMg5/ouidny6xqSu/RJYKJCmfKw==",
   "success": true,
-  "projectFilePath": "/Users/hudaabbas/Desktop/ASP.NET-CORE---REST-API-Sample-develop/REST API/DatabaseLibrary/DatabaseLibrary.csproj",
+  "projectFilePath": "/Users/hudaabbas/Documents/GitHub/CPSC471_API/DatabaseLibrary/DatabaseLibrary.csproj",
   "expectedPackageFiles": [
     "/Users/hudaabbas/.nuget/packages/bouncycastle.netcore/1.8.3/bouncycastle.netcore.1.8.3.nupkg.sha512",
     "/Users/hudaabbas/.nuget/packages/google.protobuf/3.6.1/google.protobuf.3.6.1.nupkg.sha512",

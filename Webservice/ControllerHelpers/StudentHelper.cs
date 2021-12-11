@@ -18,11 +18,11 @@ namespace Webservice.ControllerHelpers
         /// <summary>
         /// Converts database models to a business logic object.
         /// </summary>
-        public static BusinessLibrary.Models.Student Convert(Student_db instance)
+        public static BusinessLibrary.Models.Doctor Convert(Doctor_db instance)
         {
             if (instance == null)
                 return null;
-            return new BusinessLibrary.Models.Student(instance.Id, instance.FirstName, instance.LastName);
+            return new BusinessLibrary.Models.Doctor (instance.Id, instance.Name, instance.Password);
         }
 
         #endregion
@@ -35,11 +35,12 @@ namespace Webservice.ControllerHelpers
             DbContext context, out HttpStatusCode statusCode, bool includeDetailedErrors = false)
         {
             // Extract paramters
-            string firstName = (data.ContainsKey("firstName")) ? data.GetValue("firstName").Value<string>() : null;
-            string lastName = (data.ContainsKey("lastName")) ? data.GetValue("lastName").Value<string>() : null;
+            int id = (data.ContainsKey("id")) ? data.GetValue("id").Value<int>() : 0;
+            string name = (data.ContainsKey("name")) ? data.GetValue("name").Value<string>() : null;
+            string password = (data.ContainsKey("password")) ? data.GetValue("password").Value<string>() : null;
 
             // Add instance to database
-            var dbInstance = DatabaseLibrary.Helpers.StudentHelper_db.Add(firstName, lastName,
+            var dbInstance = DatabaseLibrary.Helpers.DoctorHelper_db.Add(id, name, password,
                 context, out StatusResponse statusResponse);
 
             // Get rid of detailed internal server error message (when requested)
@@ -66,7 +67,7 @@ namespace Webservice.ControllerHelpers
             DbContext context, out HttpStatusCode statusCode, bool includeDetailedErrors = false)
         {
             // Get instances from database
-            var dbInstances = DatabaseLibrary.Helpers.StudentHelper_db.GetCollection(
+            var dbInstances = DatabaseLibrary.Helpers.DoctorHelper_db.GetCollection(
                 context, out StatusResponse statusResponse);
 
             // Convert to business logic objects

@@ -4763,11 +4763,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/hudaabbas/Desktop/ASP.NET-CORE---REST-API-Sample-develop/REST API/DatabaseLibrary/DatabaseLibrary.csproj",
+      "projectUniqueName": "/Users/hudaabbas/Documents/GitHub/CPSC471_API/DatabaseLibrary/DatabaseLibrary.csproj",
       "projectName": "DatabaseLibrary",
-      "projectPath": "/Users/hudaabbas/Desktop/ASP.NET-CORE---REST-API-Sample-develop/REST API/DatabaseLibrary/DatabaseLibrary.csproj",
+      "projectPath": "/Users/hudaabbas/Documents/GitHub/CPSC471_API/DatabaseLibrary/DatabaseLibrary.csproj",
       "packagesPath": "/Users/hudaabbas/.nuget/packages/",
-      "outputPath": "/Users/hudaabbas/Desktop/ASP.NET-CORE---REST-API-Sample-develop/REST API/DatabaseLibrary/obj/",
+      "outputPath": "/Users/hudaabbas/Documents/GitHub/CPSC471_API/DatabaseLibrary/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

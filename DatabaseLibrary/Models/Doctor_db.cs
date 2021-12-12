@@ -36,12 +36,12 @@ namespace DatabaseLibrary.Models
         public int Id { get; set; }
 
         /// <summary>
-        /// First name used of the student.
+        /// Name used of the doctor.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Last name used of the student.
+        /// Password used of the doctor.
         /// </summary>
         public string Password { get; set; }
 

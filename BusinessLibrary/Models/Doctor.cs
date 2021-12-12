@@ -49,7 +49,7 @@ namespace BusinessLibrary.Models
         public int Id { get; set; }
 
         /// <summary>
-        /// First name of the student.
+        /// Name of the doctor.
         /// </summary>
         [JsonProperty(PropertyName = "name")]
         public string Name 
@@ -61,7 +61,7 @@ namespace BusinessLibrary.Models
         }
 
         /// <summary>
-        /// Last name of the student.
+        /// Password of the doctor.
         /// </summary>
         [JsonProperty(PropertyName = "password")]
         public string Password { get; set; }

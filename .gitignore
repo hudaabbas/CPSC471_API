@@ -1,1 +1,6 @@
 Webservice/obj/
+Webservice/bin/
+BusinessLibrary/bin/
+BusinessLibrary/obj/
+DatabaseLibrary/bin/
+DatabaseLibrary/obj/

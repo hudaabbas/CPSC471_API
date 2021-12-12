@@ -46,7 +46,7 @@ namespace Webservice.ControllerHelpers
             // Get rid of detailed internal server error message (when requested)
             if (statusResponse.StatusCode == HttpStatusCode.InternalServerError
                 && !includeDetailedErrors)
-                statusResponse.Message = "Something went wrong while adding a new student.";
+                statusResponse.Message = "Something went wrong while adding a new doctor.";
 
             // Return response
             var response = new ResponseMessage
@@ -60,7 +60,7 @@ namespace Webservice.ControllerHelpers
         }
 
         /// <summary>
-        /// Gets list of students.
+        /// Gets list of doctors.
         /// </summary>
         /// <param name="includeDetailedErrors">States whether the internal server error message should be detailed or not.</param>
         public static ResponseMessage GetCollection(
@@ -76,7 +76,7 @@ namespace Webservice.ControllerHelpers
             // Get rid of detailed error message (when requested)
             if (statusResponse.StatusCode == HttpStatusCode.InternalServerError
                 && !includeDetailedErrors)
-                statusResponse.Message = "Something went wrong while retrieving the students";
+                statusResponse.Message = "Something went wrong while retrieving the doctors";
 
             // Return response
             var response = new ResponseMessage

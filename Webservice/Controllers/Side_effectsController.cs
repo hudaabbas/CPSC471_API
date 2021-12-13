@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -12,9 +12,9 @@ using Webservice.ControllerHelpers;
 
 namespace Webservice.Controllers
 {
-    [Route("api/doctors")]
+    [Route("api/side_effects")]
     [ApiController]
-    public class DoctorsController : ControllerBase
+    public class Side_effectsController : ControllerBase
     {
 
         #region Initialization
@@ -38,7 +38,7 @@ namespace Webservice.Controllers
         /// Constructor called by the service provider.
         /// Using injection to get the arguments.
         /// </summary>
-        public DoctorsController(IHostingEnvironment hostingEnvironment, AppSettingsHelper appSettings,
+        public Side_effectsController(IHostingEnvironment hostingEnvironment, AppSettingsHelper appSettings,
             DatabaseContextHelper database)
         {
             HostingEnvironment = hostingEnvironment;
@@ -51,10 +51,10 @@ namespace Webservice.Controllers
 
         // Gets collection.
         [HttpGet]
-        [Route("GetDoctors")]
-        public ResponseMessage GetDoctors()
+        [Route("GetSide_effects")]
+        public ResponseMessage GetSide_effects()
         {
-            var response = DoctorHelper.GetCollection(
+            var response = Side_effectsHelper.GetCollection(
                 context: Database.DbContext,
                 statusCode: out HttpStatusCode statusCode,
                 includeDetailedErrors: HostingEnvironment.IsDevelopment());
@@ -64,11 +64,11 @@ namespace Webservice.Controllers
 
         // Adds a new instance.
         [HttpPost]
-        [Route("AddDoctor")]
-        public ResponseMessage AddDoctor([FromBody] JObject data)
+        [Route("AddSide_effect")]
+        public ResponseMessage AddSide_effect([FromBody] JObject data)
         {
 
-            var response = DoctorHelper.Add(data,
+            var response = Side_effectsHelper.Add(data,
                 context: Database.DbContext,
                 statusCode: out HttpStatusCode statusCode,
                 includeDetailedErrors: HostingEnvironment.IsDevelopment());

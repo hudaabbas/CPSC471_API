@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -12,9 +12,9 @@ using Webservice.ControllerHelpers;
 
 namespace Webservice.Controllers
 {
-    [Route("api/doctors")]
+    [Route("api/time")]
     [ApiController]
-    public class DoctorsController : ControllerBase
+    public class TimeAvailableController : ControllerBase
     {
 
         #region Initialization
@@ -38,7 +38,7 @@ namespace Webservice.Controllers
         /// Constructor called by the service provider.
         /// Using injection to get the arguments.
         /// </summary>
-        public DoctorsController(IHostingEnvironment hostingEnvironment, AppSettingsHelper appSettings,
+        public TimeAvailableController(IHostingEnvironment hostingEnvironment, AppSettingsHelper appSettings,
             DatabaseContextHelper database)
         {
             HostingEnvironment = hostingEnvironment;
@@ -51,10 +51,10 @@ namespace Webservice.Controllers
 
         // Gets collection.
         [HttpGet]
-        [Route("GetDoctors")]
-        public ResponseMessage GetDoctors()
+        [Route("GetTimeAvailable")]
+        public ResponseMessage GetAvailableTime()
         {
-            var response = DoctorHelper.GetCollection(
+            var response = TimeAvailableHelper.GetCollection(
                 context: Database.DbContext,
                 statusCode: out HttpStatusCode statusCode,
                 includeDetailedErrors: HostingEnvironment.IsDevelopment());
@@ -64,11 +64,11 @@ namespace Webservice.Controllers
 
         // Adds a new instance.
         [HttpPost]
-        [Route("AddDoctor")]
-        public ResponseMessage AddDoctor([FromBody] JObject data)
+        [Route("AddTimeAvailable")]
+        public ResponseMessage AddTimeAvailable([FromBody] JObject data)
         {
 
-            var response = DoctorHelper.Add(data,
+            var response = TimeAvailableHelper.Add(data,
                 context: Database.DbContext,
                 statusCode: out HttpStatusCode statusCode,
                 includeDetailedErrors: HostingEnvironment.IsDevelopment());

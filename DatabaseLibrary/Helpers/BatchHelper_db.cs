@@ -37,7 +37,7 @@ namespace DatabaseLibrary.Helpers
                 // Add to database
                 int rowsAffected = context.ExecuteNonQueryCommand
                     (
-                        commandText: "INSERT INTO batch (Batch_id, MID, ExpirationDate, Medication_DIN) values (@batch_id, @mid, @exp_Date, @med_din)",
+                        commandText: "INSERT INTO batch (Batch_id, MID, ExpirationDate, Medication_DIN) values (@batch_id, @mid, STR_TO_DATE(@exp_Date,'%d/%m/%Y %H:%i:%s'), @med_din)",
                         parameters: new Dictionary<string, object>()
                         {
                             { "@batch_id", instance.Batch_id },

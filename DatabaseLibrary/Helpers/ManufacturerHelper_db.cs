@@ -85,9 +85,8 @@ namespace DatabaseLibrary.Helpers
                 foreach (DataRow row in table.Rows)
                     instances.Add(new Manufacturer_db
                             (
-                                manu_id: (int)row["MedID"],
+                                manu_id: (int)row["MID"],
                                 name: row["Name"].ToString() 
-                                // password: row["Password"].ToString()
                             )
                         );
 

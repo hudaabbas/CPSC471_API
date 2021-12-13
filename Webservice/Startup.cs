@@ -109,7 +109,7 @@ namespace Webservice
                 app.UseEndpoints(endpoints =>
                 {
                     endpoints.MapControllerRoute(
-                        name: "doctors",
+                        name: "application",
                         pattern: "{controller}/{action}/{id?}");
                 });
                 // Default listener to the app

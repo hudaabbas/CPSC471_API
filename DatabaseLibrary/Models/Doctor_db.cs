@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -36,12 +36,12 @@ namespace DatabaseLibrary.Models
         public int Id { get; set; }
 
         /// <summary>
-        /// Name used of the doctor.
+        /// First name used of the student.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Password used of the doctor.
+        /// Last name used of the student.
         /// </summary>
         public string Password { get; set; }
 

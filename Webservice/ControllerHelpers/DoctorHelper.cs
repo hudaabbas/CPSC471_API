@@ -1,4 +1,4 @@
-﻿using BusinessLibrary.Models;
+using BusinessLibrary.Models;
 using DatabaseLibrary.Core;
 using DatabaseLibrary.Models;
 using Newtonsoft.Json.Linq;
@@ -46,7 +46,7 @@ namespace Webservice.ControllerHelpers
             // Get rid of detailed internal server error message (when requested)
             if (statusResponse.StatusCode == HttpStatusCode.InternalServerError
                 && !includeDetailedErrors)
-                statusResponse.Message = "Something went wrong while adding a new doctor.";
+                statusResponse.Message = "Something went wrong while adding a new student.";
 
             // Return response
             var response = new ResponseMessage
@@ -60,7 +60,7 @@ namespace Webservice.ControllerHelpers
         }
 
         /// <summary>
-        /// Gets list of doctors.
+        /// Gets list of students.
         /// </summary>
         /// <param name="includeDetailedErrors">States whether the internal server error message should be detailed or not.</param>
         public static ResponseMessage GetCollection(
@@ -76,7 +76,7 @@ namespace Webservice.ControllerHelpers
             // Get rid of detailed error message (when requested)
             if (statusResponse.StatusCode == HttpStatusCode.InternalServerError
                 && !includeDetailedErrors)
-                statusResponse.Message = "Something went wrong while retrieving the doctors";
+                statusResponse.Message = "Something went wrong while retrieving the students";
 
             // Return response
             var response = new ResponseMessage
@@ -91,3 +91,4 @@ namespace Webservice.ControllerHelpers
 
     }
 }
+

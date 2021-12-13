@@ -87,7 +87,7 @@ namespace DatabaseLibrary.Helpers
                     instances.Add(new Medication_db
                             (
                                 dIN: (int)row["DIN"],
-                                refillStatus: (bool)row["RefillStatus"],
+                                refillStatus: (row["RefillStatus"].ToString() == "1"),
                                 expDate: row["ExpDate"].ToString(),
                                 dosage:(int)row["Dosage"],
                                 time: (int)row["Time"],

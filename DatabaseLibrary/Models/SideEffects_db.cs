@@ -18,10 +18,10 @@ namespace DatabaseLibrary.Models
         /// <summary>
         /// Fields constructor.
         /// </summary>
-        public SideEffects_db(int DIN, String Side_effect)
+        public SideEffects_db(int dIN, String side_effect)
         {
-            DIN = DIN;
-            Side_effect = Side_effect;
+            DIN = dIN;
+            Side_effect = side_effect;
         }
 
         #endregion

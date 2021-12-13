@@ -19,11 +19,11 @@ namespace DatabaseLibrary.Models
         /// <summary>
         /// Fields constructor.
         /// </summary>
-        public Clinic_db(int ClinicNo, string Address, string Name)
+        public Clinic_db(int clinicNo, string address, string name)
         {
-            ClinicNo = ClinicNo;
-            Address = Address;
-            Name = Name;
+            ClinicNo = clinicNo;
+            Address = address;
+            Name = name;
         }
 
         #endregion

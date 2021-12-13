@@ -18,10 +18,10 @@ namespace DatabaseLibrary.Models
         /// <summary>
         /// Fields constructor.
         /// </summary>
-        public SideEffects_db(int DIN, String Side_effects)
+        public SideEffects_db(int DIN, String Side_effect)
         {
             DIN = DIN;
-            Side_effects = Side_effects;
+            Side_effect = Side_effect;
         }
 
         #endregion
@@ -36,7 +36,7 @@ namespace DatabaseLibrary.Models
         /// <summary>
         /// Refill status of medication.
         /// </summary>
-        public String Side_effects { get; set; }
+        public String Side_effect { get; set; }
 
         /// <summary>
         /// Last name used of the student.

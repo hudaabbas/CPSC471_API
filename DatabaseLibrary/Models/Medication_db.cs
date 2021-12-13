@@ -19,14 +19,14 @@ namespace DatabaseLibrary.Models
         /// <summary>
         /// Fields constructor.
         /// </summary>
-        public Medication_db(int DIN, bool RefillStatus, String ExpDate, int Dosage, int Time, int LeftoverAmount)
+        public Medication_db(int dIN, bool refillStatus, String expDate, int dosage, int time, int leftoverAmount)
         {
-            DIN = DIN;
-            RefillStatus = RefillStatus;
-            ExpDate= ExpDate;
-            Dosage= Dosage;
-            Time= Time;
-            LeftoverAmount= LeftoverAmount;
+            DIN = dIN;
+            RefillStatus = refillStatus;
+            ExpDate= expDate;
+            Dosage= dosage;
+            Time= time;
+            LeftoverAmount= leftoverAmount;
         }
 
         #endregion

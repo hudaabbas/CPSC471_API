@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Webservice.ControllerHelpers
 {
-    public class ClinicHelper
+    public class Side_effectsHelper
     {
 
         #region Converters
@@ -18,11 +18,11 @@ namespace Webservice.ControllerHelpers
         /// <summary>
         /// Converts database models to a business logic object.
         /// </summary>
-        public static BusinessLibrary.Models.Clinic Convert(Clinic_db instance)
+        public static BusinessLibrary.Models.Side_effects Convert(Side_effects_db instance)
         {
             if (instance == null)
                 return null;
-            return new BusinessLibrary.Models.Clinic(instance.ClinicNo, instance.Address, instance.Name);
+            return new BusinessLibrary.Models.Side_effects(instance.DIN, instance.Side_effect);
         }
 
         #endregion
@@ -35,18 +35,17 @@ namespace Webservice.ControllerHelpers
             DbContext context, out HttpStatusCode statusCode, bool includeDetailedErrors = false)
         {
             // Extract paramters
-            int clinicNo = (data.ContainsKey("ClinicNo")) ? data.GetValue("ClinicNo").Value<int>() : 0;
-            string address = (data.ContainsKey("Address")) ? data.GetValue("Address").Value<string>() : null;
-            string name = (data.ContainsKey("Name")) ? data.GetValue("Name").Value<string>() : null;
+            int dIN = (data.ContainsKey("dIN")) ? data.GetValue("dIN").Value<int>() : 0;
+            string side_effect = (data.ContainsKey("side_effect")) ? data.GetValue("side_effect").Value<string>() : null;
 
             // Add instance to database
-            var dbInstance = DatabaseLibrary.Helpers.ClinicHelper_db.Add(clinicNo, address, name,
+            var dbInstance = DatabaseLibrary.Helpers.Side_effectsHelper_db.Add(dIN, side_effect,
                 context, out StatusResponse statusResponse);
 
             // Get rid of detailed internal server error message (when requested)
             if (statusResponse.StatusCode == HttpStatusCode.InternalServerError
                 && !includeDetailedErrors)
-                statusResponse.Message = "Something went wrong while adding a new clinic.";
+                statusResponse.Message = "Something went wrong while adding a new side_effects.";
 
             // Return response
             var response = new ResponseMessage
@@ -67,7 +66,7 @@ namespace Webservice.ControllerHelpers
             DbContext context, out HttpStatusCode statusCode, bool includeDetailedErrors = false)
         {
             // Get instances from database
-            var dbInstances = DatabaseLibrary.Helpers.ClinicHelper_db.GetCollection(
+            var dbInstances = DatabaseLibrary.Helpers.Side_effectsHelper_db.GetCollection(
                 context, out StatusResponse statusResponse);
 
             // Convert to business logic objects
@@ -76,7 +75,7 @@ namespace Webservice.ControllerHelpers
             // Get rid of detailed error message (when requested)
             if (statusResponse.StatusCode == HttpStatusCode.InternalServerError
                 && !includeDetailedErrors)
-                statusResponse.Message = "Something went wrong while retrieving the clinics";
+                statusResponse.Message = "Something went wrong while retrieving the students";
 
             // Return response
             var response = new ResponseMessage

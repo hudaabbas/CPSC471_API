@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Webservice.ControllerHelpers
 {
-    public class StudentHelper
+    public class DoctorHelper
     {
 
         #region Converters

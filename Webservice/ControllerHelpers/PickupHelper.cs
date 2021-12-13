@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Webservice.ControllerHelpers
 {
-    public class StudentHelper
+    public class PickupHelper
     {
 
         #region Converters
@@ -18,11 +18,11 @@ namespace Webservice.ControllerHelpers
         /// <summary>
         /// Converts database models to a business logic object.
         /// </summary>
-        public static BusinessLibrary.Models.Doctor Convert(Doctor_db instance)
+        public static BusinessLibrary.Models.Pickup Convert(Pickup_db instance)
         {
             if (instance == null)
                 return null;
-            return new BusinessLibrary.Models.Doctor (instance.Id, instance.Name, instance.Password);
+            return new BusinessLibrary.Models.Pickup (instance.HealthcareNo, instance.DIN, instance.Location, instance.Name);
         }
 
         #endregion
@@ -35,12 +35,13 @@ namespace Webservice.ControllerHelpers
             DbContext context, out HttpStatusCode statusCode, bool includeDetailedErrors = false)
         {
             // Extract paramters
-            int id = (data.ContainsKey("id")) ? data.GetValue("id").Value<int>() : 0;
-            string name = (data.ContainsKey("name")) ? data.GetValue("name").Value<string>() : null;
-            string password = (data.ContainsKey("password")) ? data.GetValue("password").Value<string>() : null;
+            int healthcare_no = (data.ContainsKey("healthcare_no")) ? data.GetValue("healthcare_no").Value<int>() : 0;
+            int din = (data.ContainsKey("din")) ? data.GetValue("din").Value<int>():0;
+            string location = (data.ContainsKey("location")) ? data.GetValue("location").Value<string>() : null;
+            string name= (data.ContainsKey("name")) ? data.GetValue("name").Value<string>() : null;
 
             // Add instance to database
-            var dbInstance = DatabaseLibrary.Helpers.DoctorHelper_db.Add(id, name, password,
+            var dbInstance = DatabaseLibrary.Helpers.PickupHelper_db.Add(healthcare_no, din, location, name,
                 context, out StatusResponse statusResponse);
 
             // Get rid of detailed internal server error message (when requested)
@@ -67,7 +68,7 @@ namespace Webservice.ControllerHelpers
             DbContext context, out HttpStatusCode statusCode, bool includeDetailedErrors = false)
         {
             // Get instances from database
-            var dbInstances = DatabaseLibrary.Helpers.DoctorHelper_db.GetCollection(
+            var dbInstances = DatabaseLibrary.Helpers.PickupHelper_db.GetCollection(
                 context, out StatusResponse statusResponse);
 
             // Convert to business logic objects

@@ -13,9 +13,9 @@ using Newtonsoft.Json.Linq;
 
 namespace Webservice.Controllers
 {
-    [Route("api/students")]
+    [Route("api/doctors")]
     [ApiController]
-    public class StudentsController : ControllerBase
+    public class DoctorsController : ControllerBase
     {
 
         #region Initialization
@@ -39,7 +39,7 @@ namespace Webservice.Controllers
         /// Constructor called by the service provider.
         /// Using injection to get the arguments.
         /// </summary>
-        public StudentsController(IHostingEnvironment hostingEnvironment, AppSettingsHelper appSettings,
+        public DoctorsController(IHostingEnvironment hostingEnvironment, AppSettingsHelper appSettings,
             DatabaseContextHelper database)
         {
             HostingEnvironment = hostingEnvironment;
@@ -52,10 +52,10 @@ namespace Webservice.Controllers
 
         // Gets collection.
         [HttpGet]
-        [Route("GetStudents")]
-        public ResponseMessage GetStudents()
+        [Route("GetDoctors")]
+        public ResponseMessage GetDoctors()
         {
-            var response = StudentHelper.GetCollection(
+            var response = DoctorHelper.GetCollection(
                 context: Database.DbContext,
                 statusCode: out HttpStatusCode statusCode,
                 includeDetailedErrors: HostingEnvironment.IsDevelopment());
@@ -65,11 +65,11 @@ namespace Webservice.Controllers
 
         // Adds a new instance.
         [HttpPost]
-        [Route("AddStudent")]
-        public ResponseMessage AddStudent([FromBody] JObject data)
+        [Route("AddDoctor")]
+        public ResponseMessage AddDoctor([FromBody] JObject data)
         {
 
-            var response = StudentHelper.Add(data,
+            var response = DoctorHelper.Add(data,
                 context: Database.DbContext,
                 statusCode: out HttpStatusCode statusCode,
                 includeDetailedErrors: HostingEnvironment.IsDevelopment());

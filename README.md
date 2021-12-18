@@ -1,4 +1,4 @@
-# CPSC471_API
+# API Program
 Replace the database username and password accordingly in appsettings.json
 ## Commands
 First run `cd Webservice`\
